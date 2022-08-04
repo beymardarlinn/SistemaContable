@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import Router from 'next/router';
 
 const InputText = styled.input`
     border: 1px solid var(--gris3);
-    padding: 1rem;
+    padding: 10px;
     min-width: 300px;
 `;
 const InputSubmit = styled.button`
@@ -27,20 +28,33 @@ const InputSubmit = styled.button`
 `;
 
 const Buscar = () => {
+
+    const [busqueda, guardarBusqueda] = useState('');
+
+    const buscarProducto = (e) => {
+        e.preventDefault();
+
+        if (busqueda.trim() === '') return;
+        //redireccionar a /buscar
+        Router.push({
+            pathname:'/buscar',
+            query: { q : busqueda }
+        })
+    }
+
     return (
         <form
-            css={css`
-                position: relative;
-            `}
+            css={css`position: relative;`}
+            onSubmit={buscarProducto} 
         >
             <InputText
                 type="text"
-                placeholder='Buscar Productos'
+                placeholder='Buscar Pedido'
+                onChange={e => guardarBusqueda(e.target.value)}
             />
 
-            <InputSubmit  type="submit">Buscar</InputSubmit>
+            <InputSubmit type="submit">Buscar</InputSubmit>
         </form>
-
     );
 }
  

@@ -4,11 +4,22 @@ import styled from '@emotion/styled';
 export const Formulario = styled.form`
     max-width: 600px;
     width: 95%;
-    margin: 5rem auto 0 auto;
+    margin: 2rem auto 3rem auto;
+    background: #5cb8ff;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 12px 20px 0 rgb(80 85 223 / 37%);
+    border-radius: 5px;
+
+    fieldset {
+        margin: 0 auto 2rem auto;
+        border: 1px solid #e1e1e1;
+        font-size: 2rem;
+        padding: 2rem;
+    }
 `;
 
 export const Campo = styled.div`
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
 
@@ -17,15 +28,21 @@ export const Campo = styled.div`
         font-size: 1.8rem;
     }
 
-    input {
+    input, textarea {
         flex: 1;
-        padding: 1rem;
+        padding: 3px;
+    }
+
+    textarea {
+        height: 80px;
     }
 `;
 
 export const InputSubmit = styled.input`
     background-color: var(--naranja);
     width: 100%;
+    align-items: center;
+    margin: auto;
     padding: 1.5rem;
     text-align: center;
     color: #fff;
@@ -34,9 +51,14 @@ export const InputSubmit = styled.input`
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
+    border-radius: 5px;
+    display: block;
+    
 
     &:hover {
         cursor: pointer;
+        background : #f15e34e0;
+        box-shadow: 0 12px 20px 0 rgb(80 85 223 / 37%);
     }
 `;
 
@@ -51,3 +73,4 @@ export const Error = styled.p`
     text-transform: uppercase;
     margin: 2rem 0;
 `;
+

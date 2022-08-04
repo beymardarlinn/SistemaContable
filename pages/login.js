@@ -9,6 +9,13 @@ import Router from 'next/router';
 import firebase from '../firebase';
 import validarIniciarSesion from '../validacion/validacionIniciarSesion';
 
+const Icono = styled.img`
+    width: 200px;
+    margin: 0 0 0 5px;
+    margin: 20px auto 0 auto;
+    display: block;
+`
+
 const STATE_INICIAL = {
   email: '',
   password: ''
@@ -36,10 +43,11 @@ const Login = () => {
     <div>
         <Layout>
           <>
+            <Icono src="/img/login.svg" />
             <h1
               css={css`
                 text-align: center;
-                margin-top: 5rem;
+                margin-top: 2rem;
               `}
             >Iniciar Sesion</h1>
 
@@ -82,7 +90,7 @@ const Login = () => {
           </>
         </Layout>
     </div>
-    );
+  );
 }
  
 export default Login;

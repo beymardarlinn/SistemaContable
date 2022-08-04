@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Header from './Header';
 import { Global, css } from '@emotion/react';
 import Head from 'next/head';
@@ -15,7 +14,6 @@ const Layout = (props) => {
                         --gris2: #6f6f6f;
                         --gris3: #e1e1e1;
                         --naranja: #da552f;
-
                     }
                     html {
                         font-size: 62.5%;
@@ -52,8 +50,8 @@ const Layout = (props) => {
             />
 
             <Head>
-                <html lang='es' />
-                <title>Product Hunt</title>
+                {/*<html lang='es' /> */}
+                <title>FastFood</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                
                 <link rel="preconnect" href="https://fonts.googleapis.com" />             

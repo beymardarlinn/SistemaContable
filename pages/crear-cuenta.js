@@ -9,6 +9,12 @@ import Router from 'next/router';
 
 import firebase from '../firebase';
 
+const Icono = styled.img`
+    width: 200px;
+    margin: 20px auto 0 auto;
+    display: block;
+`
+
 const STATE_INICIAL = {
   nombre: '',
   email: '',
@@ -37,10 +43,11 @@ const CrearCuenta = () => {
     <div>
         <Layout>
           <>
+            <Icono src="/img/registro.svg" />
             <h1
               css={css`
                 text-align: center;
-                margin-top: 5rem;
+                margin-top: 0rem;
               `}
             >Crear Cuenta</h1>
 
